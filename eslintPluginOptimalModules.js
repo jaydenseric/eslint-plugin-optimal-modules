@@ -3,8 +3,9 @@
 "use strict";
 
 const { readFileSync } = require("node:fs");
+const { join } = require("node:path");
 
-const packageJson = readFileSync("./package.json", "utf8");
+const packageJson = readFileSync(join(__dirname, "package.json"), "utf8");
 
 /**
  * Data in the `package.json` file.
