@@ -1,0 +1,61 @@
+{
+  "name": "eslint-plugin-optimal-modules",
+  "version": "1.0.0",
+  "description": "An ESLint plugin to enforce optimal JavaScript module design.",
+  "license": "MIT",
+  "author": {
+    "name": "Jayden Seric",
+    "email": "me@jaydenseric.com",
+    "url": "https://jaydenseric.com"
+  },
+  "repository": "github:jaydenseric/eslint-plugin-optimal-modules",
+  "homepage": "https://github.com/jaydenseric/eslint-plugin-optimal-modules#readme",
+  "bugs": "https://github.com/jaydenseric/eslint-plugin-optimal-modules/issues",
+  "funding": "https://github.com/sponsors/jaydenseric",
+  "keywords": [
+    "eslint",
+    "plugin",
+    "eslintplugin",
+    "optimal",
+    "module",
+    "design",
+    "esm",
+    "mjs"
+  ],
+  "files": [
+    "eslintPluginOptimalModules.js"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./eslintPluginOptimalModules.js",
+    "./eslintPluginOptimalModules.js": "./eslintPluginOptimalModules.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "@types/eslint": "^8.40.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.2",
+    "@typescript-eslint/parser": "^5.60.1",
+    "coverage-node": "^8.0.0",
+    "eslint": "^8.43.0",
+    "eslint-plugin-eslint-plugin": "^5.1.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.5"
+  },
+  "scripts": {
+    "eslint": "eslint .",
+    "prettier": "prettier -c .",
+    "types": "tsc -p jsconfig.json",
+    "tests": "coverage-node --test-reporter=spec --test",
+    "test": "npm run eslint && npm run prettier && npm run types && npm run tests",
+    "prepublishOnly": "npm test"
+  }
+}
