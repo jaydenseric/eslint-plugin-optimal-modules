@@ -1,6 +1,6 @@
 # eslint-plugin-optimal-modules changelog
 
-## Next
+## 1.0.2
 
 ### Patch
 
