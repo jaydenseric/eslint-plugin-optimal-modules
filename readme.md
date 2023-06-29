@@ -29,6 +29,21 @@ Alternatively, manually configure the plugin and the desired rules:
 }
 ```
 
+To allow named exports in [Storybook](https://storybook.js.org) story modules that have a [Component Story Format (CSF)](https://github.com/ComponentDriven/csf), add this extra ESLint config:
+
+```json
+{
+  "overrides": [
+    {
+      "files": ["*.stories.{mjs,cjs,js,mts,cts,ts,tsx}"],
+      "rules": {
+        "optimal-modules/no-named-exports": "off"
+      }
+    }
+  ]
+}
+```
+
 ## Rules
 
 ### Rule `no-named-exports`
