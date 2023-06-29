@@ -1,5 +1,11 @@
 # eslint-plugin-optimal-modules changelog
 
+## Next
+
+### Patch
+
+- Fixed the readme intro.
+
 ## 1.0.1
 
 ### Patch

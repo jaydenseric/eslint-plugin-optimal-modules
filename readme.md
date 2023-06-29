@@ -1,6 +1,6 @@
 # eslint-plugin-optimal-modules
 
-Asserts a string matches a snapshot saved in a file. An environment variable can be used to save rather than assert snapshots.
+An [ESLint plugin](https://eslint.org/docs/latest/use/configure/plugins) to enforce [optimal JavaScript module design](https://jaydenseric.com/blog/optimal-javascript-module-design).
 
 ## Installation
 
