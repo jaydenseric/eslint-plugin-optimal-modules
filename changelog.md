@@ -1,5 +1,11 @@
 # eslint-plugin-optimal-modules changelog
 
+## Next
+
+### Patch
+
+- Updated the `package.json` field `repository` to conform to new npm requirements.
+
 ## 1.0.2
 
 ### Patch

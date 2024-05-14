@@ -8,7 +8,10 @@
     "email": "me@jaydenseric.com",
     "url": "https://jaydenseric.com"
   },
-  "repository": "github:jaydenseric/eslint-plugin-optimal-modules",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaydenseric/eslint-plugin-optimal-modules.git"
+  },
   "homepage": "https://github.com/jaydenseric/eslint-plugin-optimal-modules#readme",
   "bugs": "https://github.com/jaydenseric/eslint-plugin-optimal-modules/issues",
   "funding": "https://github.com/sponsors/jaydenseric",
