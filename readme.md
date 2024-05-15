@@ -10,38 +10,69 @@ To install [`eslint-plugin-optimal-modules`](https://npm.im/eslint-plugin-optima
 npm install eslint-plugin-optimal-modules --save-dev
 ```
 
-To use the [recommended config](#config-recommended), add the following ESLint config:
+To use the [recommended config](#config-recommended), add the following ESLint “flat” config in [`eslint.config.mjs`](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file):
 
-```json
-{
-  "extends": ["plugin:optimal-modules/recommended"]
-}
+```js
+// @ts-check
+
+import eslintPluginOptimalModules from "eslint-plugin-optimal-modules";
+
+/**
+ * ESLint config.
+ * @satisfies {Array<import("eslint").Linter.FlatConfig>}
+ */
+const eslintConfig = [eslintPluginOptimalModules.configs.recommended];
+
+export default eslintConfig;
 ```
 
 Alternatively, manually configure the plugin and the desired rules:
 
-```json
-{
-  "plugins": ["optimal-modules"],
-  "rules": {
-    "optimal-modules/no-named-exports": "error"
-  }
-}
+```js
+// @ts-check
+
+import eslintPluginOptimalModules from "eslint-plugin-optimal-modules";
+
+/**
+ * ESLint config.
+ * @satisfies {Array<import("eslint").Linter.FlatConfig>}
+ */
+const eslintConfig = [
+  {
+    plugins: {
+      "optimal-modules": eslintPluginOptimalModules,
+    },
+    rules: {
+      "optimal-modules/no-named-exports": "error",
+    },
+  },
+];
+
+export default eslintConfig;
 ```
 
-To allow named exports in [Storybook](https://storybook.js.org) story modules that have a [Component Story Format (CSF)](https://github.com/ComponentDriven/csf), add this extra ESLint config:
+To allow named exports in [Storybook](https://storybook.js.org) story modules that have a [Component Story Format (CSF)](https://github.com/ComponentDriven/csf):
 
-```json
-{
-  "overrides": [
-    {
-      "files": ["*.stories.{mjs,cjs,js,mts,cts,ts,tsx}"],
-      "rules": {
-        "optimal-modules/no-named-exports": "off"
-      }
-    }
-  ]
-}
+```js
+// @ts-check
+
+import eslintPluginOptimalModules from "eslint-plugin-optimal-modules";
+
+/**
+ * ESLint config.
+ * @satisfies {Array<import("eslint").Linter.FlatConfig>}
+ */
+const eslintConfig = [
+  eslintPluginOptimalModules.configs.recommended,
+  {
+    files: ["**/*.stories.{mjs,cjs,js,mts,cts,ts,tsx}"],
+    rules: {
+      "optimal-modules/no-named-exports": "off",
+    },
+  },
+];
+
+export default eslintConfig;
 ```
 
 ## Rules

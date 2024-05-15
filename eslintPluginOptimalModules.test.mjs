@@ -1,29 +1,20 @@
 // @ts-check
 
-import { createRequire } from "node:module";
 import { describe, it } from "node:test";
 
+import typescriptEslintParser from "@typescript-eslint/parser";
 import { RuleTester } from "eslint";
 
 import eslintPluginOptimalModules from "./eslintPluginOptimalModules.js";
 
-const require = createRequire(import.meta.url);
-
-const ruleTesterParserEslint = new RuleTester({
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-  },
-});
+const ruleTesterParserEslint = new RuleTester();
 
 const ruleTesterParserTypescript = new RuleTester({
-  parser:
-    // TODO: Use `import.meta.resolve` once it’s no longer experimental in
-    // Node.js.
-    require.resolve("@typescript-eslint/parser"),
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
+  languageOptions: {
+    parser: typescriptEslintParser,
+    parserOptions: {
+      ecmaVersion: "latest",
+    },
   },
 });
 
