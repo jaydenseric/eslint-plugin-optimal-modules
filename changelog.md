@@ -20,6 +20,7 @@
   - Updated `actions/setup-node` to v4.
 - Updated the `package.json` field `repository` to conform to new npm requirements.
 - Updated the package script `eslint`, ESLint config, and tests for ESLint v9.
+- Integrated new dev dependency [`eslint-plugin-jsdoc`](https://npm.im/eslint-plugin-jsdoc).
 - Updated the readme instructions for ESLint “flat” config using [`eslint.config.mjs`](https://eslint.org/docs/latest/use/configure/configuration-files#configuration-file).
 
 ## 1.0.2

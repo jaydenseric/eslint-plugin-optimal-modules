@@ -2,6 +2,7 @@
 
 import eslintJs from "@eslint/js";
 import eslintPluginEslintPlugin from "eslint-plugin-eslint-plugin";
+import eslintPluginJsdoc from "eslint-plugin-jsdoc";
 import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
 import globals from "globals";
 
@@ -20,6 +21,7 @@ const eslintConfig = [
     // @ts-expect-error
     eslintPluginEslintPlugin.configs["flat/recommended"]
   ),
+  eslintPluginJsdoc.configs["flat/recommended-typescript-flavor-error"],
   {
     languageOptions: {
       globals: globals.nodeBuiltin,

@@ -50,6 +50,7 @@
     "coverage-node": "^8.0.0",
     "eslint": "^9.2.0",
     "eslint-plugin-eslint-plugin": "^6.1.0",
+    "eslint-plugin-jsdoc": "^48.2.4",
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "globals": "^15.2.0",
     "prettier": "^3.2.5",
