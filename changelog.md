@@ -2,8 +2,6 @@
 
 ## Next
 
-### Patch
-
 ### Major
 
 - Updated Node.js support to `^18.18.0 || ^20.9.0 || >=21.1.0`.
