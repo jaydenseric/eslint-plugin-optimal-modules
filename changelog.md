@@ -1,5 +1,11 @@
 # eslint-plugin-optimal-modules changelog
 
+## Next
+
+### Patch
+
+- Updated dependencies.
+
 ## 2.0.0
 
 ### Major
