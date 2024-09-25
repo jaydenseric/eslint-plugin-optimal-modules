@@ -2,9 +2,15 @@
 
 ## Next
 
+### Major
+
+- Updated the peer dependency [`eslint`](https://npm.im/eslint) to `^9.11.1`.
+- Removed the dependency [`@types/eslint`](https://npm.im/@types/eslint) to rely on the types provided in [`eslint`](https://npm.im/eslint) v9.10+.
+
 ### Patch
 
 - Updated dependencies.
+- Added the dependency [`@types/estree`](https://npm.im/@types/estree) so it’s no longer transitive.
 - Migrate deprecated types in the project and example ESLint configs.
 
 ## 2.0.0

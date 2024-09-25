@@ -38,10 +38,10 @@
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   },
   "peerDependencies": {
-    "eslint": "^9.0.0"
+    "eslint": "^9.11.1"
   },
   "dependencies": {
-    "@types/eslint": "^9.6.1"
+    "@types/estree": "^1.0.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
