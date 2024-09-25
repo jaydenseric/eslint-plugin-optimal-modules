@@ -5,6 +5,7 @@
 ### Patch
 
 - Updated dependencies.
+- Migrate deprecated types in the project and example ESLint configs.
 
 ## 2.0.0
 

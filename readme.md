@@ -19,7 +19,7 @@ import eslintPluginOptimalModules from "eslint-plugin-optimal-modules";
 
 /**
  * ESLint config.
- * @satisfies {Array<import("eslint").Linter.FlatConfig>}
+ * @satisfies {Array<import("eslint").Linter.Config>}
  */
 const eslintConfig = [eslintPluginOptimalModules.configs.recommended];
 
@@ -35,7 +35,7 @@ import eslintPluginOptimalModules from "eslint-plugin-optimal-modules";
 
 /**
  * ESLint config.
- * @satisfies {Array<import("eslint").Linter.FlatConfig>}
+ * @satisfies {Array<import("eslint").Linter.Config>}
  */
 const eslintConfig = [
   {
@@ -60,7 +60,7 @@ import eslintPluginOptimalModules from "eslint-plugin-optimal-modules";
 
 /**
  * ESLint config.
- * @satisfies {Array<import("eslint").Linter.FlatConfig>}
+ * @satisfies {Array<import("eslint").Linter.Config>}
  */
 const eslintConfig = [
   eslintPluginOptimalModules.configs.recommended,
