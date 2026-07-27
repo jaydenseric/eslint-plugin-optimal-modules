@@ -8,6 +8,7 @@
 
 ### Patch
 
+- Updated dev dependencies.
 - Updated package scripts.
 - Updated GitHub Actions CI config.
 
