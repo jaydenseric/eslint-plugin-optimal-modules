@@ -1,5 +1,16 @@
 # eslint-plugin-optimal-modules changelog
 
+## Next
+
+### Major
+
+- Updated Node.js support to `^22.13.0 || ^24.0.0 || >=26.0.0`.
+
+### Patch
+
+- Updated package scripts.
+- Updated GitHub Actions CI config.
+
 ## 3.0.0
 
 ### Major

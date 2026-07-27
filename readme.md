@@ -137,7 +137,7 @@ Enabled rules:
 
 Supported runtime environments:
 
-- [Node.js](https://nodejs.org) versions `^18.18.0 || ^20.9.0 || >=21.1.0`.
+- [Node.js](https://nodejs.org) versions `^22.13.0 || ^24.0.0 || >=26.0.0`.
 
 Projects must configure [TypeScript](https://typescriptlang.org) to use types from the CommonJS modules that have a `// @ts-check` comment:
 
