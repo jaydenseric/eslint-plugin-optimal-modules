@@ -9,22 +9,50 @@ import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
 import globals from "globals";
 
 /**
- * ESLint config.
+ * Globs for ESM files.
+ * @satisfies {Array<string>}
+ */
+const globsEsm = ["**/**.mjs"];
+
+/**
+ * Globs for CJS files.
+ * @satisfies {Array<string>}
+ */
+const globsCjs = ["**/**.cjs", "**/**.js"];
+
+/**
+ * Globs for all JavaScript files.
+ * @satisfies {Array<string>}
+ */
+const globsJs = [...globsEsm, ...globsCjs];
+
+/**
+ * ESLint configuration.
  * @satisfies {Array<Linter.Config>}
  */
 const eslintConfig = [
-  eslintJs.configs.recommended,
-  /**
-   * This package doesn’t have types yet.
-   * @see https://github.com/eslint-community/eslint-plugin-eslint-plugin/issues/310
-   * @type {Array<Linter.Config>}
-   */
-  (
-    // @ts-expect-error
-    eslintPluginEslintPlugin.configs["flat/recommended"]
-  ),
-  eslintPluginJsdoc.configs["flat/recommended-typescript-flavor-error"],
   {
+    files: globsJs,
+    ...eslintJs.configs.recommended,
+  },
+  {
+    files: globsJs,
+    ...eslintPluginEslintPlugin.configs.recommended,
+  },
+  {
+    files: globsJs,
+    ...eslintPluginJsdoc.configs["flat/recommended-typescript-flavor-error"],
+  },
+  {
+    files: globsJs,
+    rules: {
+      "arrow-body-style": "error",
+      "object-shorthand": "error",
+      strict: "error",
+    },
+  },
+  {
+    files: globsEsm,
     languageOptions: {
       globals: globals.nodeBuiltin,
     },
@@ -32,15 +60,12 @@ const eslintConfig = [
       "simple-import-sort": eslintPluginSimpleImportSort,
     },
     rules: {
-      "arrow-body-style": "error",
-      "object-shorthand": "error",
-      strict: "error",
       "simple-import-sort/imports": "error",
       "simple-import-sort/exports": "error",
     },
   },
   {
-    files: ["**/*.{cjs,js}"],
+    files: globsCjs,
     languageOptions: {
       sourceType: "commonjs",
       globals: globals.node,

@@ -38,20 +38,20 @@
     "node": "^22.13.0 || ^24.0.0 || >=26.0.0"
   },
   "peerDependencies": {
-    "eslint": "^9.11.1"
+    "eslint": "^10.0.0"
   },
   "dependencies": {
     "@types/estree": "^1.0.6"
   },
   "devDependencies": {
-    "@eslint/js": "^9.11.1",
+    "@eslint/js": "^10.0.1",
     "@types/node": "^26.1.1",
     "@typescript-eslint/parser": "^8.7.0",
     "coverage-node": "^8.0.0",
-    "eslint": "^9.11.1",
-    "eslint-plugin-eslint-plugin": "^6.2.0",
-    "eslint-plugin-jsdoc": "^50.2.5",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint": "^10.8.0",
+    "eslint-plugin-eslint-plugin": "^7.6.0",
+    "eslint-plugin-jsdoc": "^63.3.0",
+    "eslint-plugin-simple-import-sort": "^14.0.0",
     "globals": "^17.8.0",
     "prettier": "^3.3.3",
     "typescript": "^6.0.3"
