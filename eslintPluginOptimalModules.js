@@ -1,13 +1,14 @@
 // @ts-check
 
+/**
+ * @import { ESLint } from "eslint"
+ * @import { Node } from "estree"
+ */
+
 "use strict";
 
 const { readFileSync } = require("node:fs");
 const { join } = require("node:path");
-
-// Workaround a TypeScript bug:
-// https://github.com/microsoft/TypeScript/issues/58542
-/** @typedef {import("eslint").ESLint.Plugin} ESLintPlugin */
 
 const packageJson = readFileSync(join(__dirname, "package.json"), "utf8");
 
@@ -20,7 +21,7 @@ const packageData = JSON.parse(packageJson);
 const PLUGIN_NAME = "optimal-modules";
 const RULE_NAME_NO_NAMED_EXPORTS = "no-named-exports";
 
-/** @implements {ESLintPlugin} */
+/** @implements {ESLint.Plugin} */
 class EslintPluginOptimalModules {
   /** ESLint plugin metadata. */
   meta = /** @type {const} */ ({
@@ -32,7 +33,7 @@ class EslintPluginOptimalModules {
   rules =
     /**
      * @type {const}
-     * @satisfies {ESLintPlugin["rules"]}
+     * @satisfies {ESLint.Plugin["rules"]}
      */
     ({
       /**
@@ -55,7 +56,7 @@ class EslintPluginOptimalModules {
         create(context) {
           return {
             ["ExportNamedDeclaration[declaration!=null], ExportSpecifier[exported.name!='default']"](
-              /** @type {import("estree").Node} */ node,
+              /** @type {Node} */ node,
             ) {
               context.report({
                 node,

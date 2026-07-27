@@ -1,5 +1,7 @@
 // @ts-check
 
+/** @import { Linter } from "eslint" */
+
 import eslintJs from "@eslint/js";
 import eslintPluginEslintPlugin from "eslint-plugin-eslint-plugin";
 import eslintPluginJsdoc from "eslint-plugin-jsdoc";
@@ -8,14 +10,14 @@ import globals from "globals";
 
 /**
  * ESLint config.
- * @satisfies {Array<import("eslint").Linter.Config>}
+ * @satisfies {Array<Linter.Config>}
  */
 const eslintConfig = [
   eslintJs.configs.recommended,
   /**
    * This package doesn’t have types yet.
    * @see https://github.com/eslint-community/eslint-plugin-eslint-plugin/issues/310
-   * @type {Array<import("eslint").Linter.Config>}
+   * @type {Array<Linter.Config>}
    */
   (
     // @ts-expect-error

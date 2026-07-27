@@ -5,12 +5,16 @@
 ### Major
 
 - Updated Node.js support to `^22.13.0 || ^24.0.0 || >=26.0.0`.
+- Use the JSDoc tag `@import` for type imports (requires TypeScript v5.5+).
+- The type `ESLintPlugin` is no longer exported from `eslint-plugin-optimal-modules/eslintPluginOptimalModules.mjs`.
 
 ### Patch
 
 - Updated dev dependencies.
 - Updated package scripts.
 - Updated GitHub Actions CI config.
+- Updated TypeScript config.
+- Updated VS Code workspace settings.
 
 ## 3.0.0
 
