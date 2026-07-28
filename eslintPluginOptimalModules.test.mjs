@@ -1,7 +1,7 @@
 // @ts-check
 
 import { deepStrictEqual, strictEqual } from "node:assert";
-import { describe, it } from "node:test";
+import { suite, test } from "node:test";
 
 import eslintPluginOptimalModules from "./eslintPluginOptimalModules.mjs";
 import meta from "./meta.mjs";
@@ -9,19 +9,19 @@ import ruleNoNamedExports, {
   name as ruleNoNamedExportsName,
 } from "./rules/no-named-exports.mjs";
 
-describe("ESLint plugin.", { concurrency: true }, () => {
-  it("Meta.", () => {
+suite("ESLint plugin.", { concurrency: true }, () => {
+  test("Meta.", () => {
     strictEqual(eslintPluginOptimalModules.meta, meta);
   });
 
-  it(`Rule \`${ruleNoNamedExportsName}\`.`, () => {
+  test(`Rule \`${ruleNoNamedExportsName}\`.`, () => {
     strictEqual(
       eslintPluginOptimalModules.rules[ruleNoNamedExportsName],
       ruleNoNamedExports,
     );
   });
 
-  it("Config `recommended`.", () => {
+  test("Config `recommended`.", () => {
     deepStrictEqual(eslintPluginOptimalModules.configs.recommended, {
       plugins: {
         [meta.namespace]: eslintPluginOptimalModules,

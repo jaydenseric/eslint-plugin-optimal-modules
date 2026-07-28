@@ -1,15 +1,15 @@
 // @ts-check
 
-import { describe, it } from "node:test";
+import { suite, test } from "node:test";
 
 import parser from "@typescript-eslint/parser";
 import { RuleTester } from "eslint";
 
 import rule, { name } from "./no-named-exports.mjs";
 
-RuleTester.describe = describe;
-RuleTester.it = it;
-RuleTester.itOnly = it.only;
+RuleTester.describe = suite;
+RuleTester.it = test;
+RuleTester.itOnly = test.only;
 
 const ruleTester = new RuleTester({
   languageOptions: {
