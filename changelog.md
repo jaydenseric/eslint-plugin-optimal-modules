@@ -31,6 +31,7 @@
 - Switched to the Node.js test runner code coverage, removing the dev dependency [`coverage-node`](https://npm.im/coverage-node).
 - Moved rules into separate modules.
 - Improved tests.
+- Sorted config in `.editorconfig`.
 
 ## 3.0.0
 
