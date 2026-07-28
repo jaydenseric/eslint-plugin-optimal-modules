@@ -32,6 +32,7 @@
 - Moved rules into separate modules.
 - Improved tests.
 - Sorted config in `.editorconfig`.
+- Added a `.gitattributes` file to enforce LF line endings.
 
 ## 3.0.0
 
