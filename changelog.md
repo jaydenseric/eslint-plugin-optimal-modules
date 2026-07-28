@@ -28,6 +28,7 @@
 - Updated TypeScript config.
 - Updated VS Code workspace settings.
 - Updated the ESLint config.
+- Switched to the Node.js test runner code coverage, removing the dev dependency [`coverage-node`](https://npm.im/coverage-node).
 - Moved rules into separate modules.
 - Improved tests.
 

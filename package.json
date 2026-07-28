@@ -49,7 +49,6 @@
     "@eslint/js": "^10.0.1",
     "@types/node": "^26.1.1",
     "@typescript-eslint/parser": "^8.7.0",
-    "coverage-node": "^8.0.0",
     "eslint": "^10.8.0",
     "eslint-plugin-eslint-plugin": "^7.6.0",
     "eslint-plugin-jsdoc": "^63.3.0",
@@ -62,7 +61,7 @@
     "prettier": "prettier -c .",
     "eslint": "eslint",
     "types": "tsc -p jsconfig.json",
-    "test": "coverage-node --test-reporter=spec --test",
+    "test": "node --test --experimental-test-coverage --test-coverage-lines=100 --test-coverage-branches=100 --test-coverage-functions=100 --test-coverage-exclude='**/*.test.*' --test-reporter=spec",
     "check": "node --run prettier && node --run eslint && node --run types && node --run test",
     "prepublishOnly": "node --run check"
   }
