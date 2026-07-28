@@ -153,6 +153,6 @@ Projects must configure [TypeScript](https://typescriptlang.org) to use types fr
 
 ## Exports
 
-These CommonJS modules are exported via the [`package.json`](./package.json) field [`exports`](https://nodejs.org/api/packages.html#exports):
+These ECMAScript modules are exported via the [`package.json`](./package.json) field [`exports`](https://nodejs.org/api/packages.html#exports):
 
-- [`eslintPluginOptimalModules.js`](./eslintPluginOptimalModules.js)
+- [`eslintPluginOptimalModules.mjs`](./eslintPluginOptimalModules.mjs)

@@ -7,7 +7,18 @@
 - Updated Node.js support to `^22.13.0 || ^24.0.0 || >=26.0.0`.
 - Updated the peer dependency [`eslint`](https://npm.im/eslint) to `^10.0.0`.
 - Use the JSDoc tag `@import` for type imports (requires TypeScript v5.5+).
-- The type `ESLintPlugin` is no longer exported from `eslint-plugin-optimal-modules/eslintPluginOptimalModules.mjs`.
+- Changed the ESLint plugin module format from CJS in a `.js` file to ESM in a `.mjs` file. To migrate a deep import:
+
+  ```diff
+  - import eslintPluginOptimalModules from "eslint-plugin-optimal-modules/eslintPluginOptimalModules.js";
+  + import eslintPluginOptimalModules from "eslint-plugin-optimal-modules/eslintPluginOptimalModules.mjs";
+  ```
+
+- The type `ESLintPlugin` is no longer exported.
+
+### Minor
+
+- Added the ESLint plugin property `meta.namespace` with the value `"optimal-modules"`.
 
 ### Patch
 
@@ -17,6 +28,8 @@
 - Updated TypeScript config.
 - Updated VS Code workspace settings.
 - Updated the ESLint config.
+- Moved rules into separate modules.
+- Improved tests.
 
 ## 3.0.0
 

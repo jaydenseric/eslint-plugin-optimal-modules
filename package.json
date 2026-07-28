@@ -26,12 +26,14 @@
     "mjs"
   ],
   "files": [
-    "eslintPluginOptimalModules.js"
+    "eslintPluginOptimalModules.mjs",
+    "meta.mjs",
+    "rules/no-named-exports.mjs"
   ],
   "sideEffects": false,
   "exports": {
-    ".": "./eslintPluginOptimalModules.js",
-    "./eslintPluginOptimalModules.js": "./eslintPluginOptimalModules.js",
+    ".": "./eslintPluginOptimalModules.mjs",
+    "./eslintPluginOptimalModules.mjs": "./eslintPluginOptimalModules.mjs",
     "./package.json": "./package.json"
   },
   "engines": {
