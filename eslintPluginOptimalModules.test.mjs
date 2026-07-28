@@ -23,6 +23,7 @@ suite("ESLint plugin.", { concurrency: true }, () => {
 
   test("Config `recommended`.", () => {
     deepStrictEqual(eslintPluginOptimalModules.configs.recommended, {
+      name: `${meta.namespace}/recommended`,
       plugins: {
         [meta.namespace]: eslintPluginOptimalModules,
       },

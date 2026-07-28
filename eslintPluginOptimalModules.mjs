@@ -25,6 +25,7 @@ class EslintPluginOptimalModules {
   configs = /** @type {const} */ ({
     /** Recommended ESLint config. */
     recommended: {
+      name: `${meta.namespace}/recommended`,
       plugins: {
         [meta.namespace]: this,
       },

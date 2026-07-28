@@ -19,6 +19,7 @@
 ### Minor
 
 - Added the ESLint plugin property `meta.namespace` with the value `"optimal-modules"`.
+- Added the ESLint plugin config `recommended` property `name` with the value `"optimal-modules/recommended"`.
 
 ### Patch
 
