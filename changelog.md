@@ -34,6 +34,7 @@
 - Improved tests.
 - Sorted config in `.editorconfig`.
 - Added a `.gitattributes` file to enforce LF line endings.
+- Updated docs.
 
 ## 3.0.0
 

@@ -15,14 +15,11 @@ To use the [recommended config](#config-recommended), add the following ESLint â
 ```js
 // @ts-check
 
-/** @import { Linter } from "eslint"
+/** @import { Linter } from "eslint" */
 
 import eslintPluginOptimalModules from "eslint-plugin-optimal-modules";
 
-/**
- * ESLint config.
- * @satisfies {Array<Linter.Config>}
- */
+/** @satisfies {Array<Linter.Config>} */
 const eslintConfig = [eslintPluginOptimalModules.configs.recommended];
 
 export default eslintConfig;
@@ -33,14 +30,11 @@ Alternatively, manually configure the plugin and the desired rules:
 ```js
 // @ts-check
 
-/** @import { Linter } from "eslint"
+/** @import { Linter } from "eslint" */
 
 import eslintPluginOptimalModules from "eslint-plugin-optimal-modules";
 
-/**
- * ESLint config.
- * @satisfies {Array<Linter.Config>}
- */
+/** @satisfies {Array<Linter.Config>} */
 const eslintConfig = [
   {
     plugins: {
@@ -60,14 +54,11 @@ To allow named exports in [Storybook](https://storybook.js.org) story modules th
 ```js
 // @ts-check
 
-/** @import { Linter } from "eslint"
+/** @import { Linter } from "eslint" */
 
 import eslintPluginOptimalModules from "eslint-plugin-optimal-modules";
 
-/**
- * ESLint config.
- * @satisfies {Array<Linter.Config>}
- */
+/** @satisfies {Array<Linter.Config>} */
 const eslintConfig = [
   eslintPluginOptimalModules.configs.recommended,
   {
