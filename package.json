@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-optimal-modules",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "An ESLint plugin to enforce optimal JavaScript module design.",
   "license": "MIT",
   "author": {
